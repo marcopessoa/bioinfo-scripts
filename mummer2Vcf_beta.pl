@@ -105,10 +105,10 @@ sub complete_indel() {
         my $alt = $ref_base;
         if ($indel_type eq "INSERTION") {
             #print STDOUT join("\t", $indel_ref, $indel_ref_start, $alt, $indel, $indel_type), "\n";
-            print STDOUT join("\t", $indel_ref, $indel_ref_start, $alt, $indel, "INDEL"), "\n";
+            print STDOUT join("\t", $indel_ref, $indel_ref_start, "indel\_".$indel_ref_start, $alt, $indel, ".", ".", "."), "\n";
         } elsif ($indel_type eq "DELETION") {
             #print STDOUT join("\t", $indel_ref, $indel_ref_start, $indel, $alt, $indel_type), "\n";
-            print STDOUT join("\t", $indel_ref, $indel_ref_start, $indel, $alt, "INDEL"), "\n";
+            print STDOUT join("\t", $indel_ref, $indel_ref_start, "indel\_".$indel_ref_start, $indel, $alt, ".", ".", "."), "\n";
         } else {
             die("complete_indel: oops");
         }
